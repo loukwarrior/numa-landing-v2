@@ -18,17 +18,22 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: 'NUMA Social Wellness Club | Reconecta con tu esencia',
-  description: 'El primer club de bienestar social en México. Thermal Contrast, Breathwork, Medicina Ancestral y comunidad. Próxima apertura en Cancún 2026.',
-  keywords: ['wellness', 'social club', 'sauna', 'ice bath', 'breathwork', 'cancun', 'bienestar', 'temazcal'],
+  title: 'NUMA Wellness Club Cancún | Founding Members Pre-Sale - 40% Off',
+  description: 'Sé uno de los primeros 100 Founding Members de NUMA, el primer club de bienestar social de México. 40% de descuento de por vida. Solo 47 spots restantes.',
+  keywords: ['wellness', 'social club', 'sauna', 'ice bath', 'breathwork', 'cancun', 'bienestar', 'temazcal', 'founding members', 'wellness club mexico'],
   authors: [{ name: 'NUMA Social Wellness Club' }],
   openGraph: {
-    title: 'NUMA Social Wellness Club',
-    description: 'El primer club de bienestar social en México',
-    url: 'https://numasocialwellness.club',
+    title: 'NUMA Wellness Club - Founding Members Pre-Sale',
+    description: '40% de descuento de por vida para los primeros 100 miembros. El primer club de bienestar social de Cancún abre Q3-Q4 2026.',
+    url: 'https://www.numawellness.mx',
     siteName: 'NUMA Social Wellness Club',
     locale: 'es_MX',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NUMA Wellness Club - Founding Members',
+    description: 'Solo 47 spots restantes para Founding Members. 40% off de por vida en el primer club de bienestar social de México.',
   },
 }
 

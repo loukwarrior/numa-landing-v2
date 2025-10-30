@@ -87,7 +87,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
           >
             <button
               onClick={handlePrimaryClick}
@@ -101,6 +101,36 @@ export default function Hero() {
             >
               Conoce NUMA
             </button>
+          </motion.div>
+
+          {/* Urgency Box */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="bg-numa-dorado/15 border-2 border-numa-dorado rounded-2xl p-6 backdrop-blur-sm">
+              <div className="text-sm uppercase tracking-widest text-numa-dorado font-bold mb-3 font-sans">
+                🔥 Founding Members Pre-Sale
+              </div>
+              <div className="text-lg text-numa-blanco mb-4 font-semibold font-sans">
+                Solo los primeros 100 obtienen 40% de descuento de por vida
+              </div>
+              {/* Progress bar */}
+              <div className="bg-numa-blanco/20 h-2.5 rounded-full mb-3 overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: '53%' }}
+                  transition={{ delay: 1.5, duration: 1.5, ease: 'easeOut' }}
+                  className="bg-gradient-to-r from-numa-dorado to-[#f4d03f] h-full rounded-full"
+                />
+              </div>
+              <div className="flex justify-between items-center text-sm text-numa-blanco/90 font-sans">
+                <span>47 spots restantes</span>
+                <span>⏰ Cierra en: <strong className="text-numa-dorado">23 días</strong></span>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

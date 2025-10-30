@@ -8,6 +8,7 @@ const tiers = [
   {
     name: 'Explorer',
     price: '$750',
+    foundingPrice: '$450',
     period: 'MXN/mes',
     visits: '2 clases/mes',
     description: 'Descubre el contraste térmico',
@@ -17,12 +18,13 @@ const tiers = [
       'Toallas y amenities incluidos',
       'Acceso a Longevity Lab',
     ],
-    cta: 'Únete como Explorer',
+    cta: 'Ser Founding Member',
     popular: false,
   },
   {
     name: 'Regular',
     price: '$1,650',
+    foundingPrice: '$990',
     period: 'MXN/mes',
     visits: '5 clases/mes',
     description: 'Bienestar consistente',
@@ -32,12 +34,13 @@ const tiers = [
       'Priority booking',
       '10% descuento en retail',
     ],
-    cta: 'Únete como Regular',
+    cta: 'Ser Founding Member',
     popular: false,
   },
   {
     name: 'Committed',
     price: '$2,900',
+    foundingPrice: '$1,740',
     period: 'MXN/mes',
     visits: '12 clases/mes',
     description: 'Transformación profunda',
@@ -47,16 +50,17 @@ const tiers = [
       'Acceso a eventos nocturnos',
       '2 guest passes mensuales',
     ],
-    cta: 'Únete como Committed',
+    cta: 'Ser Founding Member',
     popular: true,
     badge: 'MÁS POPULAR',
   },
   {
-    name: 'Founder',
+    name: 'Infinite',
     price: '$4,000',
+    foundingPrice: '$2,400',
     period: 'MXN/mes',
     visits: 'Ilimitado',
-    description: 'La élite del wellness',
+    description: 'Sin límites. Solo transformación.',
     features: [
       'Todo lo de Committed',
       '1 Guided/día + Free Flow extra',
@@ -65,9 +69,8 @@ const tiers = [
       'Sin fee de inscripción',
       'Tu nombre en placa fundadora',
     ],
-    cta: 'Ser Founder Member',
+    cta: 'Ser Founding Member',
     popular: false,
-    badge: 'Solo 100 spots',
   },
 ]
 
@@ -101,42 +104,62 @@ export default function Memberships() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: index * 0.15, duration: 0.6 }}
-              className={`relative rounded-3xl p-8 ${
+              className={`relative rounded-3xl overflow-hidden ${
                 tier.popular
                   ? 'bg-gradient-to-b from-numa-dorado/20 to-transparent border-2 border-numa-dorado'
                   : 'bg-numa-blanco/5 border border-numa-blanco/10'
               } card-hover`}
             >
-              {/* Popular Badge */}
-              {tier.popular && tier.badge && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-numa-dorado text-numa-negro px-4 py-1.5 rounded-full flex items-center gap-2">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-bold">{tier.badge}</span>
-                  </div>
-                </div>
-              )}
-
-              {/* Tier Name */}
-              <h3 className="text-2xl md:text-3xl font-serif font-medium text-numa-blanco mb-3">
-                {tier.name}
-              </h3>
-
-              {/* Visits */}
-              <p className="text-numa-dorado text-base font-semibold mb-4 font-sans">{tier.visits}</p>
-
-              {/* Price */}
-              <div className="mb-4">
-                <span className="text-5xl font-serif font-bold text-numa-dorado">
-                  {tier.price}
-                </span>
-                <span className="text-numa-blanco/60 text-lg ml-2 font-sans">{tier.period}</span>
+              {/* Spots Left Badge */}
+              <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg z-10">
+                🔥 47 spots left
               </div>
 
-              {/* Description */}
-              <p className="text-numa-blanco/70 mb-8 font-sans">
-                {tier.description}
-              </p>
+              {/* Founding Pricing Header */}
+              <div className="bg-gradient-to-r from-numa-dorado to-[#f4d03f] p-4 -mt-0">
+                <div className="text-center">
+                  <div className="text-xs text-numa-negro/70 uppercase tracking-wider mb-1 font-sans font-bold">
+                    🏛️ Founding Member Pricing
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="line-through text-numa-negro/50 text-lg">
+                      {tier.price}
+                    </span>
+                    <span className="text-numa-negro text-3xl font-bold">
+                      {tier.foundingPrice}
+                    </span>
+                    <span className="text-numa-negro/80 text-sm font-semibold">/mes</span>
+                  </div>
+                  <div className="text-xs text-numa-negro/70 mt-1 font-sans font-semibold">
+                    40% off locked forever
+                  </div>
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-8">
+                {/* Popular Badge */}
+                {tier.popular && tier.badge && (
+                  <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-numa-dorado text-numa-negro px-4 py-1.5 rounded-full flex items-center gap-2">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="text-sm font-bold">{tier.badge}</span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Tier Name */}
+                <h3 className="text-2xl md:text-3xl font-serif font-medium text-numa-blanco mb-3 mt-8">
+                  {tier.name}
+                </h3>
+
+                {/* Visits */}
+                <p className="text-numa-dorado text-base font-semibold mb-4 font-sans">{tier.visits}</p>
+
+                {/* Description */}
+                <p className="text-numa-blanco/70 mb-8 font-sans">
+                  {tier.description}
+                </p>
 
               {/* Features */}
               <ul className="space-y-4 mb-8">
@@ -190,7 +213,7 @@ export default function Memberships() {
                   <th className="pb-4 text-center text-numa-blanco/90 font-medium font-sans">Explorer</th>
                   <th className="pb-4 text-center text-numa-blanco/90 font-medium font-sans">Regular</th>
                   <th className="pb-4 text-center text-numa-dorado font-medium font-sans">Committed</th>
-                  <th className="pb-4 text-center text-numa-blanco/90 font-medium font-sans">Founder</th>
+                  <th className="pb-4 text-center text-numa-blanco/90 font-medium font-sans">Infinite</th>
                 </tr>
               </thead>
               <tbody className="text-sm">
