@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme {
+  /* NUMA Brand Colors */
+  --color-numa-terracota: #D4A574;
+  --color-numa-arena: #E8D5C4;
+  --color-numa-crema: #F5F0E8;
+  --color-numa-azul-caribe: #2C6B7F;
+  --color-numa-dorado: #D4AF37;
+  --color-numa-blanco: #FFFFFF;
+  --color-numa-negro: #2A2A2A;
+  --color-numa-gris-cálido: #4A4A4A;
+  
+  /* Background Colors */
+  --color-bg-primary: var(--color-numa-crema);
+  --color-bg-secondary: var(--color-numa-arena);
+  --color-bg-dark: var(--color-numa-azul-caribe);
+  
+  /* Legacy color aliases for compatibility */
+  --color-aura-black: var(--color-numa-negro);
+  --color-aura-white: var(--color-numa-blanco);
+  --color-aura-gold: var(--color-numa-dorado);
+  --color-aura-terracota: var(--color-numa-terracota);
+  --color-aura-jade: var(--color-numa-azul-caribe);
+  --color-aura-obsidiana: var(--color-numa-negro);
+
+  --font-family-sans: var(--font-montserrat), 'Montserrat', system-ui, sans-serif;
+  --font-family-serif: var(--font-playfair), 'Playfair Display', Georgia, serif;
+
+  --font-size-display: 72px;
+  --font-size-h1: 60px;
+  --font-size-h2: 48px;
+  --font-size-h3: 36px;
+  --font-size-h4: 24px;
+  --font-size-body: 18px;
+  --font-size-small: 14px;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-numa-negro);
+    font-family: var(--font-family-sans);
+  }
+
+  h1 {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-display);
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-h2);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-h3);
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-family: var(--font-family-serif);
+    font-size: var(--font-size-h4);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: var(--font-size-body);
+    line-height: 1.5;
+    font-family: var(--font-family-sans);
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-numa-arena);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-numa-dorado);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-numa-terracota);
+}
+
+/* Video background overlay */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(42, 42, 42, 0.7) 0%,
+    rgba(42, 42, 42, 0.4) 50%,
+    rgba(42, 42, 42, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* Hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-hover {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-hover:hover {
+  transform: scale(1.1);
+}
+
+/* Button hover */
+.btn-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+}

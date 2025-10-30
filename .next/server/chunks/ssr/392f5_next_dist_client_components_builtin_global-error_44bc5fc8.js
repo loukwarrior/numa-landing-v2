@@ -1,0 +1,3 @@
+module.exports=[15996,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(11853);a.n(d("[project]/Documents/GitHub/numa-landing-v2/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},88415,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(11853);a.n(d("[project]/Documents/GitHub/numa-landing-v2/node_modules/next/dist/client/components/builtin/global-error.js"))},98314,a=>{"use strict";a.i(15996);var b=a.i(88415);a.n(b)}];
+
+//# sourceMappingURL=392f5_next_dist_client_components_builtin_global-error_44bc5fc8.js.map
