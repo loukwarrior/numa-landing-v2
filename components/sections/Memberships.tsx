@@ -111,27 +111,27 @@ export default function Memberships() {
               } card-hover`}
             >
               {/* Spots Left Badge */}
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white px-3 py-1.5 rounded-full text-xs font-bold shadow-lg z-10">
-                🔥 47 spots left
+              <div className="absolute -top-2 -right-2 bg-numa-terracota text-numa-blanco px-3 py-1.5 rounded-full text-xs font-sans font-semibold shadow-lg z-10">
+                47 spots restantes
               </div>
 
               {/* Founding Pricing Header */}
               <div className="bg-gradient-to-r from-numa-dorado to-[#f4d03f] p-4 -mt-0">
                 <div className="text-center">
-                  <div className="text-xs text-numa-negro/70 uppercase tracking-wider mb-1 font-sans font-bold">
-                    🏛️ Founding Member Pricing
+                  <div className="text-xs text-numa-negro/70 uppercase tracking-wider mb-1 font-sans font-semibold">
+                    Founding Member Pricing
                   </div>
                   <div className="flex items-center justify-center gap-2">
-                    <span className="line-through text-numa-negro/50 text-lg">
+                    <span className="line-through text-numa-negro/50 text-lg font-serif">
                       {tier.price}
                     </span>
-                    <span className="text-numa-negro text-3xl font-bold">
+                    <span className="text-numa-negro text-3xl font-serif font-bold">
                       {tier.foundingPrice}
                     </span>
-                    <span className="text-numa-negro/80 text-sm font-semibold">/mes</span>
+                    <span className="text-numa-negro/80 text-sm font-sans font-light">/mes</span>
                   </div>
-                  <div className="text-xs text-numa-negro/70 mt-1 font-sans font-semibold">
-                    40% off locked forever
+                  <div className="text-xs text-numa-negro/70 mt-1 font-sans font-medium">
+                    40% de descuento de por vida
                   </div>
                 </div>
               </div>

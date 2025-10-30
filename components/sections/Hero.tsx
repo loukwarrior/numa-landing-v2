@@ -111,14 +111,14 @@ export default function Hero() {
             className="max-w-2xl mx-auto"
           >
             <div className="bg-numa-dorado/15 border-2 border-numa-dorado rounded-2xl p-6 backdrop-blur-sm">
-              <div className="text-sm uppercase tracking-widest text-numa-dorado font-bold mb-3 font-sans">
-                🔥 Founding Members Pre-Sale
+              <div className="text-sm uppercase tracking-widest text-numa-dorado font-semibold mb-3 font-sans">
+                Founding Members Pre-Sale
               </div>
-              <div className="text-lg text-numa-blanco mb-4 font-semibold font-sans">
+              <div className="text-lg text-numa-blanco mb-4 font-sans font-light">
                 Solo los primeros 100 obtienen 40% de descuento de por vida
               </div>
               {/* Progress bar */}
-              <div className="bg-numa-blanco/20 h-2.5 rounded-full mb-3 overflow-hidden">
+              <div className="bg-numa-blanco/20 h-2 rounded-full mb-3 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: '53%' }}
@@ -126,9 +126,9 @@ export default function Hero() {
                   className="bg-gradient-to-r from-numa-dorado to-[#f4d03f] h-full rounded-full"
                 />
               </div>
-              <div className="flex justify-between items-center text-sm text-numa-blanco/90 font-sans">
+              <div className="flex justify-between items-center text-sm text-numa-blanco/90 font-sans font-light">
                 <span>47 spots restantes</span>
-                <span>⏰ Cierra en: <strong className="text-numa-dorado">23 días</strong></span>
+                <span>Cierra en: <strong className="text-numa-dorado font-semibold">23 días</strong></span>
               </div>
             </div>
           </motion.div>

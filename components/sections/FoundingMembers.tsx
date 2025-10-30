@@ -16,8 +16,8 @@ export default function FoundingMembers() {
           transition={{ duration: 0.6 }}
           className="inline-block mb-6"
         >
-          <span className="bg-numa-dorado text-numa-negro px-5 py-2 rounded-full text-sm font-bold inline-flex items-center gap-2">
-            ⭐ SOLO 100 FOUNDING MEMBERS
+          <span className="bg-numa-dorado/20 text-numa-dorado border border-numa-dorado px-6 py-2 rounded-full text-sm font-sans font-semibold tracking-wide">
+            SOLO 100 FOUNDING MEMBERS
           </span>
         </motion.div>
 
@@ -27,9 +27,11 @@ export default function FoundingMembers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-5xl md:text-6xl font-serif font-bold text-numa-blanco mb-6"
+          className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-numa-blanco mb-6"
         >
-          Los Primeros 100
+          Los{' '}
+          <span className="text-numa-dorado font-medium italic">primeros</span>
+          {' '}100
         </motion.h2>
 
         {/* Manifesto */}
@@ -38,7 +40,7 @@ export default function FoundingMembers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-xl md:text-2xl text-numa-blanco/90 max-w-3xl mx-auto mb-16 font-sans"
+          className="text-xl md:text-2xl text-numa-blanco/80 max-w-3xl mx-auto mb-16 font-sans font-light"
         >
           No eres un cliente. Eres un co-creador del primer club de bienestar social de México.
         </motion.p>
@@ -52,11 +54,12 @@ export default function FoundingMembers() {
           className="bg-numa-blanco/95 rounded-3xl p-8 md:p-12 max-w-5xl mx-auto shadow-2xl"
         >
 
-          <h3 className="text-3xl md:text-4xl font-serif font-bold text-numa-azul-caribe mb-4">
-            40% DE DESCUENTO DE POR VIDA
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-numa-azul-caribe mb-4">
+            40% de descuento{' '}
+            <span className="text-numa-dorado font-medium italic">de por vida</span>
           </h3>
 
-          <p className="text-lg text-gray-600 mb-10 font-sans">
+          <p className="text-lg md:text-xl text-gray-600 mb-10 font-sans font-light">
             Solo para los primeros 100 miembros
           </p>
 
@@ -66,29 +69,29 @@ export default function FoundingMembers() {
 
               {/* Tier Preview - Infinite */}
               <div className="text-center md:text-left">
-                <span className="block text-gray-500 text-sm uppercase tracking-wider mb-3 font-sans">
+                <span className="block text-gray-500 text-sm uppercase tracking-wider mb-3 font-sans font-semibold">
                   Infinite
                 </span>
                 <div className="mb-3">
-                  <span className="line-through text-gray-400 text-2xl mr-3">
+                  <span className="line-through text-gray-400 text-2xl mr-3 font-serif">
                     $4,000
                   </span>
-                  <span className="text-numa-dorado text-5xl font-bold">
+                  <span className="text-numa-dorado text-5xl font-serif font-bold">
                     $2,400
                   </span>
-                  <span className="text-numa-azul-caribe text-2xl font-semibold">/mes</span>
+                  <span className="text-numa-azul-caribe text-2xl font-sans font-light">/mes</span>
                 </div>
-                <p className="text-numa-azul-caribe font-semibold text-sm">
-                  🔒 Locked forever
+                <p className="text-numa-azul-caribe font-sans font-medium text-sm">
+                  Precio garantizado de por vida
                 </p>
               </div>
 
               {/* Savings */}
               <div className="text-center md:text-left border-l-4 border-numa-dorado pl-6">
-                <div className="text-3xl md:text-4xl text-numa-azul-caribe font-bold mb-2">
+                <div className="text-3xl md:text-4xl text-numa-azul-caribe font-serif font-bold mb-2">
                   Ahorras $19,200/año
                 </div>
-                <div className="text-lg text-gray-600 font-sans">
+                <div className="text-lg text-gray-600 font-sans font-light">
                   En 5 años: $96,000 MXN
                 </div>
               </div>
@@ -97,20 +100,21 @@ export default function FoundingMembers() {
           </div>
 
           {/* Benefits List */}
-          <h4 className="text-2xl font-serif font-bold text-numa-azul-caribe mb-6">
-            + BENEFICIOS EXCLUSIVOS FOUNDING MEMBERS:
+          <h4 className="text-2xl md:text-3xl font-serif font-bold text-numa-azul-caribe mb-8">
+            Beneficios{' '}
+            <span className="text-numa-dorado font-medium italic">exclusivos</span>
           </h4>
 
-          <ul className="text-left max-w-2xl mx-auto mb-10 space-y-4">
+          <ul className="text-left max-w-2xl mx-auto mb-10 space-y-1">
             {[
-              '🏛️ Tu nombre en placa fundadora permanente',
-              '🔒 Pricing de $2,400 garantizado de por vida',
-              '🚀 Early access exclusivo (3 meses antes del público)',
-              '🎯 Voz en decisiones de diseño y eventos del club',
-              '👑 Founding Member badge numerado + merch exclusivo',
-              '🎉 Invitación a evento fundacional privado',
+              'Tu nombre en placa fundadora permanente',
+              'Pricing de $2,400 garantizado de por vida',
+              'Early access exclusivo (3 meses antes del público)',
+              'Voz en decisiones de diseño y eventos del club',
+              'Founding Member badge numerado + merch exclusivo',
+              'Invitación a evento fundacional privado',
             ].map((benefit, idx) => (
-              <li key={idx} className="py-3 text-gray-800 border-b border-gray-200 last:border-0 font-sans">
+              <li key={idx} className="py-4 text-gray-700 border-b border-gray-200 last:border-0 font-sans font-light text-base md:text-lg">
                 {benefit}
               </li>
             ))}
@@ -128,7 +132,7 @@ export default function FoundingMembers() {
           {/* Urgency Box */}
           <div className="mb-8">
             {/* Progress Bar */}
-            <div className="bg-gray-300 h-3 rounded-full mb-4 overflow-hidden">
+            <div className="bg-gray-300 h-2 rounded-full mb-4 overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: '53%' }}
@@ -137,20 +141,20 @@ export default function FoundingMembers() {
                 className="bg-gradient-to-r from-numa-dorado to-[#f4d03f] h-full rounded-full"
               />
             </div>
-            <p className="text-lg text-numa-dorado font-bold mb-2">
-              🔥 Solo quedan 47 de 100 spots
+            <p className="text-base md:text-lg text-numa-dorado font-sans font-semibold mb-2">
+              Solo quedan 47 de 100 spots
             </p>
-            <p className="text-gray-600 font-sans">
-              ⏰ Pre-venta cierra en: <span className="font-bold text-numa-azul-caribe">23 días, 14 horas</span>
+            <p className="text-gray-600 font-sans font-light">
+              Pre-venta cierra en: <span className="font-semibold text-numa-azul-caribe">23 días</span>
             </p>
           </div>
 
           {/* CTA Button */}
           <button
             onClick={() => scrollToSection('memberships')}
-            className="btn-hover bg-gradient-to-r from-numa-dorado to-[#f4d03f] text-numa-negro px-12 py-5 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
+            className="btn-hover bg-numa-terracota text-numa-blanco px-12 py-5 rounded-full text-lg font-sans font-semibold shadow-lg hover:shadow-xl transition-all w-full md:w-auto"
           >
-            VER MEMBRESÍAS Y ASEGURAR MI DESCUENTO →
+            Ver membresías
           </button>
 
           {/* Disclaimer */}
